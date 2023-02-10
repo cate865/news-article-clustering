@@ -7,6 +7,7 @@ model = joblib.load("model.joblib")
 df = pd.read_csv('news.csv')
 vectorizer = joblib.load("vec.joblib")
 
+
 cluster_0 = []
 cluster_1= []
 cluster_2=[]
@@ -31,7 +32,7 @@ for i in df.index:
 
 st.title('News Article Clustering')
 
-st.write('A collection of news articles scraped from New Times Rwanda(https://www.newtimes.co.rw/rwanda) and clustered into 5 different clusters according to the similarity of their content')
+st.write('A collection of news articles scraped from New Times Rwanda(https://www.newtimes.co.rw/rwanda) and clustered using MiniBatchKMeans Clustering into 5 different clusters according to the similarity of their content')
 
 st.header('Cluster 0')
 
